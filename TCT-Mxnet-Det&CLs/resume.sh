@@ -1,0 +1,1 @@
+python3 fasterrcnn_cls_norm.py --num-workers 4 --gpus 0,1,2,3 --batch-size 4 --dataset coco --network resnet50_v1b --epochs 12 --lr 0.003 --val-interval 1 --use-fpn --details TCT --lr-decay-epoch 8,10 --lr-warmup -1 --resume

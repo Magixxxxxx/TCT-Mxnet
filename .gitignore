@@ -1,0 +1,8 @@
+*.params
+*.jpg
+*.txt
+*.json
+*.lock
+*.npy
+*.pyc
+__pycache__/

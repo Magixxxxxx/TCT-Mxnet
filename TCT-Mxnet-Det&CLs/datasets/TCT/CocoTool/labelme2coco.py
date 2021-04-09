@@ -13,19 +13,15 @@ except ImportError:
     print('Please install pycocotools:\n\n    pip install pycocotools\n')
     sys.exit(1)
 
-
-def main(output_dir='./json', ann_file='train.txt', op_name='train.json'):
-    if not osp.exists(output_dir):
-        os.mkdir(output_dir)
-    now = datetime.datetime.now()
+def init_data_dict():
     data = dict(
         info=dict(
             description=None,
             url=None,
             version=None,
-            year=now.year,
+            year=None,
             contributor=None,
-            date_created=now.strftime('%Y-%m-%d %H:%M:%S.%f'),
+            date_created=datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f'),
         ),
         licenses=[dict(
             url=None,
@@ -43,6 +39,14 @@ def main(output_dir='./json', ann_file='train.txt', op_name='train.json'):
             # supercategory, id, name
         ],
     )
+    return data
+
+
+def main(output_dir='./json', ann_file='train.txt', op_name='train.json'):
+    if not osp.exists(output_dir):
+        os.mkdir(output_dir)
+    now = datetime.datetime.now()
+    data = init_data_dict()
 
     classes_name_to_id = {
         "normal": 1,
@@ -58,23 +62,18 @@ def main(output_dir='./json', ann_file='train.txt', op_name='train.json'):
     }
 
     id_reflect = {
-        -1: 1,
-        0: 1,
+        -1: 1, 0: 1,
         1: 2,
         2: 3,
         3: 4,
-        4: 5,
-        5: 5,
-        6: 6,
-        8: 6,
-        9: 6,
+        4: 5, 5: 5,
+        6: 6, 8: 6, 9: 6,
         10: 7,
         11: 8,
-        12: 9,
-        13: 9,
-        14: 9,
+        12: 9, 13: 9, 14: 9,
         15: 5,
-        16: 10
+        16: 10,
+        21: 1, 22:1, 23:1 ,24:1, 26:1
     }
 
     for class_name, id_ in classes_name_to_id.items():
@@ -96,11 +95,11 @@ def main(output_dir='./json', ann_file='train.txt', op_name='train.json'):
             example = example.strip()
             print('%d----->%s' % (idx_, example))
             # Loop images
-            if '.txt' in example and os.path.exists('../' + example[:-4] + '.jpg'):
+            if '.txt' in example and os.path.exists(example[:-4] + '.jpg'):
                 im_path = example[:-4] + '.jpg'
-                an_path = '../' + example
+                an_path = example
                 # im = cv2.imread(im_path)
-                width_, height_ = imagesize.get('../' + im_path)
+                width_, height_ = imagesize.get(im_path)
                 # ------------data['annotations'] s---------------
                 flag = False
                 with open(an_path, 'r', encoding='utf8') as ann_f:

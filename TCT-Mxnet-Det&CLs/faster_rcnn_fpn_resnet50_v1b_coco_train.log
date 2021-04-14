@@ -1,0 +1,94 @@
+Namespace(amp=False, batch_size=4, dataset='coco', details='TCT', disable_hybridization=False, epochs=20, executor_threads=1, gpus='0,1,2,3', horovod=False, kv_store='nccl', log_interval=100, lr=0.002, lr_decay=0.1, lr_decay_epoch='13,17', lr_warmup=1000, lr_warmup_factor=0.3333333333333333, mixup=False, momentum=0.9, network='resnet50_v1b', no_mixup_epochs=20, norm_layer=None, num_workers=4, resume='', save_interval=1, save_prefix='faster_rcnn_fpn_resnet50_v1b_coco', seed=233, start_epoch=0, static_alloc=False, use_fpn=True, val_interval=1, verbose=False, wd=0.0001)
+Start training from [Epoch 0]
+[Epoch 0 Iteration 0] Set learning rate to 0.0006666666666666666
+[Epoch 0][Batch 99], Speed: 4.781 samples/sec, RPN_Conf=0.059,RPN_SmoothL1=0.010,RCNN_CrossEntropy=0.148,RCNN_SmoothL1=0.018,Binary_Conf=0.193,RPNAcc=0.983,RPNL1Loss=0.935,RCNNAcc=0.978,RCNNL1Loss=1.790
+[Epoch 0 Iteration 100] Set learning rate to 0.0008
+Namespace(amp=False, batch_size=4, dataset='coco', details='TCT', disable_hybridization=False, epochs=20, executor_threads=1, gpus='0,1,2,3', horovod=False, kv_store='nccl', log_interval=100, lr=2e-05, lr_decay=0.1, lr_decay_epoch='13,17', lr_warmup='-1', lr_warmup_factor=0.3333333333333333, mixup=False, momentum=0.9, network='resnet50_v1b', no_mixup_epochs=20, norm_layer=None, num_workers=4, resume='TCT0331_29.4000.params', save_interval=1, save_prefix='faster_rcnn_fpn_resnet50_v1b_coco', seed=233, start_epoch=0, static_alloc=False, use_fpn=True, val_interval=1, verbose=False, wd=0.0001)
+Start training from [Epoch 0]
+[Epoch 0][Batch 99], Speed: 4.175 samples/sec, RPN_Conf=0.004,RPN_SmoothL1=0.003,RCNN_CrossEntropy=0.098,RCNN_SmoothL1=0.049,Binary_Conf=0.039,RPNAcc=0.999,RPNL1Loss=0.116,RCNNAcc=0.960,RCNNL1Loss=0.445
+[Epoch 0][Batch 199], Speed: 4.367 samples/sec, RPN_Conf=0.005,RPN_SmoothL1=0.003,RCNN_CrossEntropy=0.102,RCNN_SmoothL1=0.050,Binary_Conf=0.041,RPNAcc=0.998,RPNL1Loss=0.117,RCNNAcc=0.959,RCNNL1Loss=0.454
+[Epoch 0][Batch 299], Speed: 4.391 samples/sec, RPN_Conf=0.005,RPN_SmoothL1=0.004,RCNN_CrossEntropy=0.103,RCNN_SmoothL1=0.052,Binary_Conf=0.040,RPNAcc=0.998,RPNL1Loss=0.117,RCNNAcc=0.958,RCNNL1Loss=0.464
+[Epoch 0][Batch 399], Speed: 4.380 samples/sec, RPN_Conf=0.005,RPN_SmoothL1=0.004,RCNN_CrossEntropy=0.103,RCNN_SmoothL1=0.053,Binary_Conf=0.041,RPNAcc=0.998,RPNL1Loss=0.117,RCNNAcc=0.958,RCNNL1Loss=0.463
+[Epoch 0][Batch 499], Speed: 4.348 samples/sec, RPN_Conf=0.005,RPN_SmoothL1=0.003,RCNN_CrossEntropy=0.105,RCNN_SmoothL1=0.052,Binary_Conf=0.043,RPNAcc=0.998,RPNL1Loss=0.115,RCNNAcc=0.958,RCNNL1Loss=0.460
+[Epoch 0][Batch 599], Speed: 4.349 samples/sec, RPN_Conf=0.005,RPN_SmoothL1=0.003,RCNN_CrossEntropy=0.103,RCNN_SmoothL1=0.052,Binary_Conf=0.043,RPNAcc=0.998,RPNL1Loss=0.115,RCNNAcc=0.958,RCNNL1Loss=0.461
+[Epoch 0][Batch 699], Speed: 4.356 samples/sec, RPN_Conf=0.005,RPN_SmoothL1=0.003,RCNN_CrossEntropy=0.103,RCNN_SmoothL1=0.052,Binary_Conf=0.044,RPNAcc=0.998,RPNL1Loss=0.115,RCNNAcc=0.958,RCNNL1Loss=0.459
+[Epoch 0][Batch 799], Speed: 4.343 samples/sec, RPN_Conf=0.004,RPN_SmoothL1=0.003,RCNN_CrossEntropy=0.102,RCNN_SmoothL1=0.051,Binary_Conf=0.044,RPNAcc=0.999,RPNL1Loss=0.114,RCNNAcc=0.958,RCNNL1Loss=0.456
+[Epoch 0][Batch 899], Speed: 4.348 samples/sec, RPN_Conf=0.004,RPN_SmoothL1=0.003,RCNN_CrossEntropy=0.101,RCNN_SmoothL1=0.051,Binary_Conf=0.044,RPNAcc=0.999,RPNL1Loss=0.113,RCNNAcc=0.958,RCNNL1Loss=0.452
+[Epoch 0][Batch 999], Speed: 4.340 samples/sec, RPN_Conf=0.004,RPN_SmoothL1=0.003,RCNN_CrossEntropy=0.101,RCNN_SmoothL1=0.051,Binary_Conf=0.044,RPNAcc=0.999,RPNL1Loss=0.114,RCNNAcc=0.959,RCNNL1Loss=0.455
+[Epoch 0] Training cost: 971.932, RPN_Conf=0.004,RPN_SmoothL1=0.003,RCNN_CrossEntropy=0.101,RCNN_SmoothL1=0.051,Binary_Conf=0.044
+[Epoch 0] Validation: 
+~~~~ Summary metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.507
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.809
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.572
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.404
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.536
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.331
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.605
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.642
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.554
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.656
+normal=38.8
+ascus=61.3
+asch=53.3
+lsil=57.6
+hsil_scc_omn=61.5
+agc_adenocarcinoma_em=67.4
+vaginalis=24.4
+monilia=31.2
+dysbacteriosis_herpes_act=55.0
+ec=56.5
+~~~~ MeanAP @ IoU=[0.50,0.95] ~~~~
+=50.7
+binary_acc---->('BinaryAcc', 0.9368770764119602)
+[Epoch 0] mAP 50.7 higher than current best [0] saving to faster_rcnn_fpn_resnet50_v1b_coco_best.params
+[Epoch 0] Saving parameters to faster_rcnn_fpn_resnet50_v1b_coco_0000_50.7000.params
+[Epoch 1][Batch 99], Speed: 4.236 samples/sec, RPN_Conf=0.004,RPN_SmoothL1=0.003,RCNN_CrossEntropy=0.103,RCNN_SmoothL1=0.052,Binary_Conf=0.048,RPNAcc=0.999,RPNL1Loss=0.114,RCNNAcc=0.958,RCNNL1Loss=0.455
+[Epoch 1][Batch 199], Speed: 4.337 samples/sec, RPN_Conf=0.004,RPN_SmoothL1=0.003,RCNN_CrossEntropy=0.099,RCNN_SmoothL1=0.051,Binary_Conf=0.048,RPNAcc=0.999,RPNL1Loss=0.113,RCNNAcc=0.958,RCNNL1Loss=0.455
+[Epoch 1][Batch 299], Speed: 4.349 samples/sec, RPN_Conf=0.004,RPN_SmoothL1=0.003,RCNN_CrossEntropy=0.099,RCNN_SmoothL1=0.052,Binary_Conf=0.049,RPNAcc=0.999,RPNL1Loss=0.114,RCNNAcc=0.958,RCNNL1Loss=0.457
+[Epoch 1][Batch 399], Speed: 4.365 samples/sec, RPN_Conf=0.004,RPN_SmoothL1=0.003,RCNN_CrossEntropy=0.099,RCNN_SmoothL1=0.051,Binary_Conf=0.049,RPNAcc=0.999,RPNL1Loss=0.114,RCNNAcc=0.959,RCNNL1Loss=0.456
+[Epoch 1][Batch 499], Speed: 4.360 samples/sec, RPN_Conf=0.004,RPN_SmoothL1=0.003,RCNN_CrossEntropy=0.100,RCNN_SmoothL1=0.052,Binary_Conf=0.048,RPNAcc=0.999,RPNL1Loss=0.114,RCNNAcc=0.958,RCNNL1Loss=0.457
+[Epoch 1][Batch 599], Speed: 4.373 samples/sec, RPN_Conf=0.004,RPN_SmoothL1=0.003,RCNN_CrossEntropy=0.101,RCNN_SmoothL1=0.052,Binary_Conf=0.048,RPNAcc=0.999,RPNL1Loss=0.114,RCNNAcc=0.958,RCNNL1Loss=0.456
+[Epoch 1][Batch 699], Speed: 4.351 samples/sec, RPN_Conf=0.004,RPN_SmoothL1=0.003,RCNN_CrossEntropy=0.102,RCNN_SmoothL1=0.052,Binary_Conf=0.048,RPNAcc=0.999,RPNL1Loss=0.114,RCNNAcc=0.958,RCNNL1Loss=0.456
+[Epoch 1][Batch 799], Speed: 4.333 samples/sec, RPN_Conf=0.004,RPN_SmoothL1=0.003,RCNN_CrossEntropy=0.101,RCNN_SmoothL1=0.051,Binary_Conf=0.049,RPNAcc=0.999,RPNL1Loss=0.113,RCNNAcc=0.958,RCNNL1Loss=0.454
+[Epoch 1][Batch 899], Speed: 4.344 samples/sec, RPN_Conf=0.004,RPN_SmoothL1=0.003,RCNN_CrossEntropy=0.101,RCNN_SmoothL1=0.051,Binary_Conf=0.049,RPNAcc=0.999,RPNL1Loss=0.113,RCNNAcc=0.958,RCNNL1Loss=0.452
+[Epoch 1][Batch 999], Speed: 4.346 samples/sec, RPN_Conf=0.004,RPN_SmoothL1=0.003,RCNN_CrossEntropy=0.100,RCNN_SmoothL1=0.051,Binary_Conf=0.049,RPNAcc=0.999,RPNL1Loss=0.113,RCNNAcc=0.958,RCNNL1Loss=0.452
+[Epoch 1] Training cost: 971.515, RPN_Conf=0.004,RPN_SmoothL1=0.003,RCNN_CrossEntropy=0.100,RCNN_SmoothL1=0.051,Binary_Conf=0.049
+[Epoch 1] Validation: 
+~~~~ Summary metrics ~~~~
+=Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.512
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.814
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.575
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.427
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.541
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.330
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.606
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.642
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.579
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.656
+normal=39.0
+ascus=62.3
+asch=54.8
+lsil=57.7
+hsil_scc_omn=61.6
+agc_adenocarcinoma_em=67.5
+vaginalis=24.9
+monilia=32.8
+dysbacteriosis_herpes_act=55.0
+ec=56.2
+~~~~ MeanAP @ IoU=[0.50,0.95] ~~~~
+=51.2
+binary_acc---->('BinaryAcc', 0.9235880398671097)
+[Epoch 1] mAP 51.2 higher than current best [50.7] saving to faster_rcnn_fpn_resnet50_v1b_coco_best.params
+[Epoch 1] Saving parameters to faster_rcnn_fpn_resnet50_v1b_coco_0001_51.2000.params
+[Epoch 2][Batch 99], Speed: 4.281 samples/sec, RPN_Conf=0.004,RPN_SmoothL1=0.003,RCNN_CrossEntropy=0.099,RCNN_SmoothL1=0.050,Binary_Conf=0.051,RPNAcc=0.999,RPNL1Loss=0.112,RCNNAcc=0.958,RCNNL1Loss=0.451
+[Epoch 2][Batch 199], Speed: 4.365 samples/sec, RPN_Conf=0.004,RPN_SmoothL1=0.003,RCNN_CrossEntropy=0.101,RCNN_SmoothL1=0.051,Binary_Conf=0.050,RPNAcc=0.999,RPNL1Loss=0.112,RCNNAcc=0.958,RCNNL1Loss=0.451
+[Epoch 2][Batch 299], Speed: 4.367 samples/sec, RPN_Conf=0.005,RPN_SmoothL1=0.003,RCNN_CrossEntropy=0.100,RCNN_SmoothL1=0.050,Binary_Conf=0.049,RPNAcc=0.999,RPNL1Loss=0.112,RCNNAcc=0.958,RCNNL1Loss=0.451
+Namespace(amp=False, batch_size=4, dataset='coco', details='TCT', disable_hybridization=False, epochs=20, executor_threads=1, gpus='0,1,2,3', horovod=False, kv_store='nccl', log_interval=100, lr=2e-05, lr_decay=0.1, lr_decay_epoch='13,17', lr_warmup='-1', lr_warmup_factor=0.3333333333333333, mixup=False, momentum=0.9, network='resnet50_v1b', no_mixup_epochs=20, norm_layer=None, num_workers=4, resume='TCT0331_29.4000.params', save_interval=1, save_prefix='faster_rcnn_fpn_resnet50_v1b_coco', seed=233, start_epoch=0, static_alloc=False, use_fpn=True, val_interval=1, verbose=False, wd=0.0001)
+Start training from [Epoch 0]
+Namespace(amp=False, batch_size=4, dataset='coco', details='TCT', disable_hybridization=False, epochs=20, executor_threads=1, gpus='0,1,2,3', horovod=False, kv_store='nccl', log_interval=100, lr=0.0002, lr_decay=0.1, lr_decay_epoch='13,17', lr_warmup='-1', lr_warmup_factor=0.3333333333333333, mixup=False, momentum=0.9, network='resnet50_v1b', no_mixup_epochs=20, norm_layer=None, num_workers=4, resume='TCT0331_29.4000.params', save_interval=1, save_prefix='faster_rcnn_fpn_resnet50_v1b_coco', seed=233, start_epoch=0, static_alloc=False, use_fpn=True, val_interval=1, verbose=False, wd=0.0001)
+Start training from [Epoch 0]

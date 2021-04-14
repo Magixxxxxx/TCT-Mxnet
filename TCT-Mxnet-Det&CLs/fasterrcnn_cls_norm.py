@@ -237,8 +237,10 @@ def validate(net, val_data, ctx, eval_metric, epoch, args):
     clipper = gcv.nn.bbox.BBoxClipToImage()
     eval_metric.reset()
     # binary cls metric
-    from utils.metric.binary_cls import BinaryAccMetric
+    from utils.metric.binary_cls import BinaryAccMetric, PrecisionMetric, RecallMetric
     binary_acc = BinaryAccMetric()
+    precision = PrecisionMetric()
+    recall = RecallMetric()
 
     if not args.disable_hybridization:
         # input format is differnet than training, thus rehybridization is needed.
@@ -291,7 +293,7 @@ def validate(net, val_data, ctx, eval_metric, epoch, args):
     root_path = os.path.join(args.save_prefix, 'json', 'binary-cls-L-large-data')
     net.export(path=root_path, epoch=epoch)
 
-    return eval_metric.get(), binary_acc.get()
+    return eval_metric.get(), binary_acc.get(), precision.get(), recall.get()
 
 
 def get_lr_at_iter(alpha, lr_warmup_factor=1. / 3.):
@@ -517,10 +519,10 @@ def train(net, train_data, val_data, eval_metric, batch_size, ctx, args):
                 epoch, (time.time() - tic), msg))
             if not (epoch + 1) % args.val_interval:
                 # consider reduce the frequency of validation to save time
-                (map_name, mean_ap), binary_acc = validate(net, val_data, ctx, eval_metric, epoch, args)
+                (map_name, mean_ap), binary_acc, precision, recall = validate(net, val_data, ctx, eval_metric, epoch, args)
                 val_msg = '\n'.join(['{}={}'.format(k, v) for k, v in zip(map_name, mean_ap)])
                 logger.info('[Epoch {}] Validation: \n{}'.format(epoch, val_msg))
-                logger.info('binary_acc---->{}'.format(binary_acc))
+                logger.info('binary_acc---->{} \n precision---->{} \n recall---->{}'.format(binary_acc, precision, recall))
                 current_map = float(mean_ap[-1])
             else:
                 current_map = 0.

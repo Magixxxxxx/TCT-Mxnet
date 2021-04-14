@@ -9,7 +9,7 @@ mkdir garbage
 fi
 
 # 2. create annotation_file.txt and shuffle
-find /root/commonfile/TCTAnnotatedData/TCTAnnotated20210331 -name "*.txt" > annotation_file.txt
+find /root/commonfile/TCTAnnotatedData/TCTAnnotated20210331/ -name "*.txt" > annotation_file.txt
 # sed -i 's/^...//g' annotation_file.txt
 cat annotation_file.txt | sort -R > annotation_file_tp.txt
 rm annotation_file.txt
